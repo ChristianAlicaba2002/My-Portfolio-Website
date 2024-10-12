@@ -1,0 +1,311 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.header{
+    position: fixed;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 2px black;
+    z-index: 10;
+    padding-bottom: 25px;
+}
+.navigation{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+.header h1{
+    font-size: 2rem;
+    letter-spacing: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-left: 30px;
+    position: absolute;
+    margin-top: 20px;
+    animation: name 1s ease-in-out;
+}
+@keyframes name {
+    from{
+        transform: translateX(-50px)
+    }
+}
+.profile{
+    width: 500px;
+    height: 540px;
+    border-radius: 50%;
+    margin-top: 8%;
+    margin-left: 18%;
+    animation: profilePic 0.9s ;
+}
+@keyframes profilePic { 
+    from{
+        transform: translateX(-100%);
+    }
+}
+.navigation ul{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    margin-left: 50%;
+    margin-top: 10px;
+    gap: 1%;
+    animation: slideright 0.8s;
+    width: 50%;
+   
+}
+@keyframes slideright {
+    from{
+        transform: translateX(80%)
+    }
+}
+.navigation li{
+    margin-bottom: -30px;
+    margin-top: 20px;
+    z-index: 10;
+}
+.navigation a{
+    position: relative;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 5px 20px;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    width: 100%;
+    border-radius: 5px;
+    background-color: rgba(0, 78, 247, 0.037);
+}
+.navigation a:after{
+    content: "";
+    width: 0;
+    height:100%;
+    position: absolute;
+    margin-top: -5%;
+    margin-left: -75%;
+    background-color: rgb(0, 78, 247);
+    border-radius: 5px;
+    transition: 0.4s ease-in-out;
+    z-index: -10;
+    color: rgb(0, 0, 0);
+}
+.navigation a:hover:after{
+    width: 100%;
+}
+.navigation a:hover{
+    color: rgb(255, 255, 255);
+}
+.container{
+    display: flex;
+}
+.container .details{
+    margin-left: 6%;
+    margin-top: 4%;
+}
+.details h3{
+    font-size: 5rem;
+    text-shadow: 0 0 3px black;
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+    animation: h3Move 0.9s;
+}
+
+@keyframes h3Move {
+    from{
+        transform: translateY(-150%);
+    }
+}
+
+.details label{
+    font-family: sans-serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-top: 10%;
+}
+
+.labels{
+    animation: movetoright 1s;
+}
+@keyframes movetoright {
+    from{
+        transform: translateX(-80%);
+    }
+}
+
+.details p{
+    letter-spacing: 2px;
+    margin-bottom: 4%;
+    font-size: 1.1rem;
+    font-family: sans-serif;
+    animation: labelmoveRight 0.9s;
+}
+@keyframes labelmoveRight {
+    from{
+        transform: translateX(120%);
+    }
+}
+.buttons{
+    display: flex;
+}
+.ContactMe{
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+    background-color: rgba(172, 255, 47, 0.552);
+    padding: 15px;
+    margin-top: 20px;
+    font-weight: 200;
+    font-family: sans-serif;
+    border: 1px solid yellowgreen;
+    border-radius: 6px;
+    animation: contactslide 1.2s;
+    transition: 0.4s ease-in-out;
+}
+@keyframes contactslide {
+    from{
+        transform: translateX(300%);
+    }
+}
+.ContactMe:hover{
+    transform: translateY(-15px);
+    background-color: rgb(172, 255, 47);
+    color: white;
+}
+.Explore{
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+    background-color: rgba(0, 115, 255, 0.141);
+    padding: 15px;
+    margin-top: 20px;
+    font-weight: 200;
+    font-family: sans-serif;
+    border: 1px solid rgb(0, 115, 255);
+    border-radius: 6px;
+    margin-left: 40px;
+    animation: exploreslide 1.5s;
+    transition: 0.4s ease-in-out;
+}
+@keyframes exploreslide {
+    from{
+        transform: translateX(250%);
+    }
+}
+.Explore:hover{
+    transform: translateY(-15px);
+    color: white;
+    background-color: rgb(0, 115, 255);
+}
+.Skills img{
+    margin-right: 10px;
+    margin-top: 50px;
+    margin-left: 10px;
+    animation: slideUp 2s;
+    cursor: pointer;
+    width: 55px;
+    transition: 0.4s ease-in-out;
+}   
+@keyframes slideUp {
+    from{
+        transform: translateY(80%);
+    }
+}
+.Skills img:hover{
+    transition: 1s;
+   transform: translateY(-10px);
+}
+.paragraph{
+    box-shadow: 0 0 3px black;
+    padding: 5px;
+    margin-top: -40%;
+    background-color: rgb(255, 0, 0);
+    display: none;
+}
+.paragraph .meaning{
+    font-size: 12px;
+}
+/*Media Queries*/
+@media (max-width:600px) {
+    .navigation{
+        background-color: rgb(255, 255, 255);
+        width: 100%;
+        margin: 0;
+        height: auto;
+    }
+    .header h1{
+        font-size: 30px;
+        letter-spacing: 3px;
+        margin-top: 15px;
+        margin-left: 5px;
+    }
+    .profile{
+        display: none;
+    }
+    .navigation ul{
+        gap: 20%;
+        margin-left: 5%;  
+    }
+    .navigation a{
+        margin-left: -50%;
+        font-size: 13px;
+        text-align: center;
+        background-color: rgba(0, 78, 247, 0);
+    }
+    .navigation a::after{
+        content: "";
+        background-color: blue;
+        width: 0;
+        margin-left: -50px;
+        margin-top: -1px;
+        transition: 0.2s ease-in;
+    }
+    .navigation a:hover:after{
+        width: 85%;
+    }
+    .navigation a:hover{
+        color: white;
+    }
+    .details{
+        height: 75vh;
+    }
+    .details h3{
+        margin-top: 40%;
+        font-size: 4rem;
+    }
+    .details .labels{
+        font-size: 1rem;
+    }
+    .details p{
+        font-size: 15px;
+        display: flex;
+        box-sizing: border-box;
+    }
+    .ContactMe{
+        margin-left: 50px;
+        font-size: small;
+        width: 100px;
+        height: 15px;
+        text-align: center;
+        padding: 15px 15px;
+    }
+    .Explore{
+        margin-left: 50px;
+        font-size: small;
+        width: 100px;
+        height: 25px;
+        text-align: center;
+        padding: 10px 15px;
+    }
+    .Skills{
+        margin-top: 10%;
+        width: 90%;
+        margin-left: 7%;
+        margin-bottom: -30%;
+        
+    }
+    .Skills img{
+        width: 40px;
+    }
+    
+}
